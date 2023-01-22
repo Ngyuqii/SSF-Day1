@@ -23,19 +23,20 @@ public class LoggingApplication {
 			logger.debug("argVal : " + argVal);
 			if (argVal.contains("--port=")) {
 				portNumber = argVal.substring(argVal.length() - 4, argVal.length());
-				logger.debug("portNumber : " + portNumber);
+				logger.debug("Args portNumber : " + portNumber);
 			}
 		}
 
 		//If no "--port=" argument is passed, then portNumber is null
 		if (portNumber == null) {
 			portNumber = System.getenv("APP_PORT");
-			logger.debug("Sys ENV portNumber : " + portNumber);
+			logger.debug("System env portNumber : " + portNumber);
 		}
 
 		//Passing portNumber = System.getenv("APP_PORT"); above gives empty string, portNumber is blank
 		if (portNumber == null || portNumber.isBlank()) {
 			portNumber = DEFAULT_PORT;
+			logger.debug("Set default portNumber: " + portNumber);
 		}
 
 		// Originally SpringApplication.run(LoggingApplication.class, args);

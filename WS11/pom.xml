@@ -12,9 +12,9 @@
 	<artifactId>workshop11</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>workshop11</name>
-	<description>Spring Boot for SSF WS11</description>
+	<description>Introduction to Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
